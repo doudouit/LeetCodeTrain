@@ -85,9 +85,9 @@ public class SubstringWithConcatenationOfAllWords {
 
         private boolean checkWords(Map<String, Integer> map) {
             boolean flag = true;
-            Collection<Integer> values = map.values();
-            for (Integer value : values) {
-                if (value > 0) {
+            Set<Map.Entry<String, Integer>> entries = map.entrySet();
+            for (Map.Entry<String, Integer> entry : entries) {
+                if (entry.getValue() > 0) {
                     flag = false;
                     break;
                 }
